@@ -1,0 +1,14 @@
+Unhandled exception. System.InvalidOperationException: The character set provided in ContentType is invalid. Cannot read content as string using an invalid character set.
+ ---> System.ArgumentException: 'Shift_JIS' is not a supported encoding name. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method. (Parameter 'name')
+   at System.Text.EncodingTable.InternalGetCodePageFromName(String name)
+   at System.Text.EncodingTable.GetCodePageFromName(String name)
+   at System.Text.Encoding.GetEncoding(String name)
+   at System.Net.Http.HttpContent.ReadBufferAsString(ArraySegment`1 buffer, HttpContentHeaders headers)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpContent.ReadBufferAsString(ArraySegment`1 buffer, HttpContentHeaders headers)
+   at System.Net.Http.HttpContent.ReadBufferedContentAsString()
+   at System.Net.Http.HttpContent.<>c.<ReadAsStringAsync>b__36_0(HttpContent s)
+   at System.Net.Http.HttpContent.WaitAndReturnAsync[TState,TResult](Task waitTask, TState state, Func`2 returnFunc)
+   at hello_dotnet.Program.Main(String[] args) in /tmp/work/hello_dotnet/Program.cs:line 17
+   at hello_dotnet.Program.<Main>(String[] args)
+
